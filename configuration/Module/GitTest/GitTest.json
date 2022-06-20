@@ -3,6 +3,6 @@
  "mdl_prefix": "gts",
  "mdl_version": "0.1",
  "mdl_type": null,
- "mdl_url": "{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/dazoulay-simplicite/module-gittes.git\"\n\t}\n}",
+ "mdl_url": "{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"git@github.com:dazoulay-simplicite/module-gittest.git\"\n\t},\n\t\"branch\": \"master\"\n}",
  "mdl_comment": null
 }
