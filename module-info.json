@@ -1,0 +1,9 @@
+{
+    "date": "2022-06-20 16:42:41",
+    "name": "GitTest",
+    "format": "json",
+    "files": ["configuration/**.json"],
+    "repository": {"origin": {"uri": "https://github.com/dazoulay-simplicite/module-gittes.git"}},
+    "version": "0.1",
+    "platform": "5.2.8-preview"
+}
