@@ -2,11 +2,11 @@
  "scr_code": "GtsTest",
  "scr_file": {
   "path": "test/src/com/simplicite/tests/GitTest/GtsTest.java",
-  "size": 461,
+  "size": 471,
   "field": "scr_file",
   "mime": "text/plain",
   "name": "GtsTest.java",
-  "id": "6436",
+  "id": "6440",
   "object": "Script",
   "rowid": "4"
  },
