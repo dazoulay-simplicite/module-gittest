@@ -1,8 +1,8 @@
 {
-    "date": "2022-06-20 16:42:41",
+    "date": "2022-06-21 12:34:21",
     "name": "GitTest",
-    "format": "json",
-    "files": ["configuration/**.json"],
+    "format": "xml",
+    "files": ["GitTest.xml"],
     "repository": {"origin": {"uri": "git@github.com:dazoulay-simplicite/module-gittest.git"}},
     "version": "0.1",
     "platform": "5.2.8-preview"
