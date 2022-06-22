@@ -1,9 +1,13 @@
 {
-    "date": "2022-06-21 12:34:21",
+    "date": "2022-06-22 16:06:28",
     "name": "GitTest",
     "format": "xml",
     "files": ["GitTest.xml"],
-    "repository": {"origin": {"uri": "git@github.com:dazoulay-simplicite/module-gittest.git"}},
+    "repository": {
+        "origin": {"uri": "git@github.com:dazoulay-simplicite/module-gittest.git"},
+        "github1": "https://github.com/dazoulay-simplicite/module-gittest.git",
+        "github2": {"uri": "https://github.com/dazoulay-simplicite/module-gittest.git"}
+    },
     "version": "0.1",
-    "platform": "5.2.8-preview"
+    "platform": "5.2.8"
 }

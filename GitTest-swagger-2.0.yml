@@ -32,56 +32,6 @@ paths:
         - token
       tags:
       - session
-  /rest/GtsObject:
-    get:
-      summary: Search GtsObject business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-gtsobject-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfGtsObject'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: gtsGtoCode
-        description: Search filter for Code
-        type: string
-        required: false
-      - in: query
-        name: gtsGtoLabel
-        description: Search filter for Label
-        type: string
-        required: false
-      tags:
-      - GtsObject
   /logout:
     get:
       summary: Logout (revoke bearer token)
@@ -99,168 +49,6 @@ paths:
           description: Unauthorized
       tags:
       - session
-  /rest/GtsObject/{row_id}:
-    post:
-      summary: Create a new GtsObjectbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-gtsobject-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/GtsObject'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/GtsObject'
-        in: body
-        name: body
-      tags:
-      - GtsObject
-      consumes:
-      - application/json
-    get:
-      summary: Get a GtsObject business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-gtsobject-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/GtsObject'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - GtsObject
-    delete:
-      summary: Delete a GtsObject business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-gtsobject-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - GtsObject
-    put:
-      summary: Update a GtsObjectbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-gtsobject-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/GtsObject'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/GtsObject'
-        in: body
-        name: body
-      tags:
-      - GtsObject
-      consumes:
-      - application/json
   /:
     get:
       summary: Get user session information
@@ -303,18 +91,6 @@ definitions:
         type: integer
         enum:
         - 404
-  GtsObject:
-    type: object
-    properties:
-      gtsGtoCode:
-        description: Code
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-      gtsGtoLabel:
-        description: Label
-        type: string
   ActionResult:
     type: object
     properties:
@@ -412,10 +188,6 @@ definitions:
         type: integer
         enum:
         - 403
-  ArrayOfGtsObject:
-    type: array
-    items:
-      $ref: '#/definitions/GtsObject'
 swagger: '2.0'
 info:
   license:
@@ -428,6 +200,3 @@ info:
   description: API for module GitTest
   title: GitTest
   version: '0.1'
-tags:
-- name: GtsObject
-  description: Object
