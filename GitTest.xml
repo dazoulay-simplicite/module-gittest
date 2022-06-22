@@ -12,7 +12,13 @@
 	"origin": {
 		"uri": "git@github.com:dazoulay-simplicite/module-gittest.git"
 	},
-	"branch": "master"
+	"branch": "master",
+	"remotes": {
+		"github1": "https://github.com/dazoulay-simplicite/module-gittest.git",
+		"github2": {
+			"uri": "https://github.com/dazoulay-simplicite/module-gittest.git"
+		}
+	}
 }]]></mdl_url>
 		<mdl_type/>
 		<mdl_comment/>
