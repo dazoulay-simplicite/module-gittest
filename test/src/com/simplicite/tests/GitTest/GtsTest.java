@@ -17,7 +17,7 @@ public class GtsTest {
 	@Test
 	public void test() {
 		try {
-			AppLog.info("This is a unit test (branch2)", null);
+			AppLog.info("This is a unit test (branch1)", null);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
