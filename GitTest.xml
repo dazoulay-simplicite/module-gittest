@@ -183,7 +183,7 @@
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
-		<obo_exportorder/>
+		<obo_exportorder>1</obo_exportorder>
 		<obo_distinct>0</obo_distinct>
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
@@ -477,6 +477,16 @@
 		<tsl_value>Objet test Git</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>GitTest</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Dataset</name>
+	<action>upsert</action>
+	<data>
+		<row_module_id.mdl_name>GitTest</row_module_id.mdl_name>
+		<dt_name>GitTest-data</dt_name>
+		<dt_file>data/GitTest-data.zip</dt_file>
+		<dt_desc><![CDATA[Created by module's data export on 2023-02-19 18:55:55]]></dt_desc>
 	</data>
 </object>
 </simplicite>
