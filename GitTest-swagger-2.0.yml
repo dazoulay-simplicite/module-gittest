@@ -3,6 +3,7 @@
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
 #             |_| Module: GitTest 0.1
+basePath: /api
 paths:
   /login:
     get:
@@ -430,4 +431,4 @@ info:
   version: '0.1'
 tags:
 - name: GtsObject
-  description: Object
+  description: Git test object
